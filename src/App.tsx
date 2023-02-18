@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Personal Portfolio with React and Typescript</h1>
+        <h1>Portfolio personal de Miguel Díaz; Estoy trabajando en ello.</h1>
         <a
           className="App-link"
           href="https://reactjs.org"
