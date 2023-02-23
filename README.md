@@ -6,9 +6,9 @@ This is a portfolio website created with React.js and Typescript. It is a single
 
 - [Installation](#installation)
 - [Features](#features)
-- [Contributing](#contributing)
 - [Credits](#credits)
-- [License](#license)
+- [Available Scripts](#available-scripts)
+- [Contact](#contact)
 
 ## Installation
 
