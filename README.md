@@ -1,5 +1,33 @@
 # Getting Started with Create React App
 
+# Miguel Díaz Portfolio
+
+This is a portfolio website created with React.js and Typescript. It is a single page application that uses React Router to navigate between different sections of the website. The website is hosted on GitHub Pages and can be found at https://mdcastillo.me
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation
+
+1. Clone the repository to your local machine.
+2. Install the dependencies with `npm install`.
+3. Run the project with `npm start`.
+
+## Features
+
+- [x] Single page application
+- [x] Responsive design
+- [x] Dark mode native
+- [x] React Router
+- [x] GitHub Pages deployment
+
+## Credits
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -39,8 +67,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `npm run deploy`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Note: make sure to the `homepage` field in `package.json` is set to the correct URL Domain before running this command.**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Builds the app for production to the `build` folder and deploys it to the `gh-pages` branch.\
+
+## Contact
+
+You can find me on [GitHub](https://github.com/MDCIrony) and [LinkedIn](https://www.linkedin.com/in/migueldiaz2023).
+Feel free to reach out to me at [miguel.backend@outlook.com](mailto:miguel.backend@outlook.com) with any questions or opportunities.
