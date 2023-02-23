@@ -21,6 +21,7 @@ function BurgerButton(props: IShowButton): JSX.Element {
 export default BurgerButton;
 
 const BurgerButtonContainer = styled.div`
+  padding-right: 2rem;
   .nav-icon-6 {
     width: 35px;
     height: 30px;
