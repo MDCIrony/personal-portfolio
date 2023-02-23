@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 # Miguel Díaz Portfolio
 
 This is a portfolio website created with React.js and Typescript. It is a single page application that uses React Router to navigate between different sections of the website. The website is hosted on GitHub Pages and can be found at https://mdcastillo.me
