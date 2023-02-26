@@ -3,6 +3,7 @@ import styled from "styled-components";
 import BurgerButton from "./components/BurgerButton";
 import HoveredLink from "../../common/HoveredLink";
 import HoveredImg from "../../common/HoveredImg";
+import { Outlet } from "react-router-dom";
 
 function Navbar(): JSX.Element {
   const [clicked, setCliked] = useState(false);
@@ -26,15 +27,9 @@ function Navbar(): JSX.Element {
 
         <div className={`links ${clicked ? "active" : ""}`.trimEnd()}>
           <HoveredLink
-            link={"/home"}
+            link={"/"}
             onClick={handleClick}
             text={"HOME"}
-            width="100px"
-          />
-          <HoveredLink
-            link={"/about"}
-            onClick={handleClick}
-            text={"ABOUT"}
             width="100px"
           />
           <HoveredLink
@@ -57,6 +52,7 @@ function Navbar(): JSX.Element {
           className={`initial ${clicked ? "active" : ""}`}
         ></BackgroundMobileNav>
       </NavbarContainer>
+      <Outlet />
     </>
   );
 }

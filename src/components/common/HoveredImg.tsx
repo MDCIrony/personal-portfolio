@@ -1,24 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-
-interface IHoveredImg {
-  img: string;
-  alt: string;
-  size: string;
-  href: string;
-}
+import { IHoveredImg } from "../../constants/types";
+import { Link } from "react-router-dom";
 
 function HoveredImg(props: IHoveredImg): JSX.Element {
   return (
     <HoveredImgContainer>
-      <a href={props.href}>
+      <Link to={props.href}>
         <img
           src={props.img}
           alt={props.alt}
           width={props.size}
           height={props.size}
         />
-      </a>
+      </Link>
     </HoveredImgContainer>
   );
 }

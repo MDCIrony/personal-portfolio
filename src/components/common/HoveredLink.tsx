@@ -1,24 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-
-interface IHoveredLink {
-  link: string;
-  text: string;
-  width?: string;
-  onClick?: () => void;
-}
+import { IHoveredLink } from "../../constants/types";
+import { Link } from "react-router-dom";
 
 function HoveredLink(props: IHoveredLink): JSX.Element {
   return (
     <HoverButtonContainer>
-      <a
+      <Link
         onClick={props.onClick}
         className="link"
-        href={props.link}
+        to={props.link}
         style={{ width: props.width ? props.width : "50px" }}
       >
         {props.text}
-      </a>
+      </Link>
     </HoverButtonContainer>
   );
 }
