@@ -23,7 +23,7 @@ function Navbar(): JSX.Element {
             img={process.env.PUBLIC_URL + "/images/hacker.png"}
             alt="logo"
             size="50px"
-            href="https://mdcastillo.me"
+            href="https://www.mdcastillo.me"
           />
         </div>
 
