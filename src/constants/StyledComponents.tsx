@@ -5,7 +5,7 @@ const StyledPage = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 120vh;
+  height: 100vh;
 
   .text {
     font-size: 2rem;
