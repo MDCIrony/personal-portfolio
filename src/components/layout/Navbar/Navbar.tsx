@@ -9,8 +9,10 @@ function Navbar(): JSX.Element {
   const [clicked, setCliked] = useState(false);
 
   const handleClick = () => {
-    //Cambia el estado de clicked
-    setCliked(!clicked);
+    //Cambia el estado de clicked solo si está en una resolución de mobile
+    if (window.screen.width < 768) {
+      setCliked(!clicked);
+    }
   };
 
   return (
