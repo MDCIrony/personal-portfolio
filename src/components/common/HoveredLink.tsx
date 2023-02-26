@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { IHoveredLink } from "../../constants/types";
 import { Link } from "react-router-dom";
 
-function HoveredLink(props: IHoveredLink): JSX.Element {
+function HoveredLink(props: IHoveredLink): React.ReactElement {
   return (
     <HoverButtonContainer>
       <Link
@@ -26,7 +26,7 @@ const HoverButtonContainer = styled.div`
     border: 4px solid #40798c;
     padding: 10px;
     background-color: #212121;
-    color: white;
+    color: #cfe0c3;
     font-weight: bold;
     font-size: 1rem;
     z-index: 1;
@@ -45,6 +45,7 @@ const HoverButtonContainer = styled.div`
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     background-color: #40798c;
+    color: red;
     width: 100%;
     height: 100%;
     top: 0;

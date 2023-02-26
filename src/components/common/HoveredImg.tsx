@@ -3,17 +3,23 @@ import styled from "styled-components";
 import { IHoveredImg } from "../../constants/types";
 import { Link } from "react-router-dom";
 
-function HoveredImg(props: IHoveredImg): JSX.Element {
+function HoveredImg(props: IHoveredImg): React.ReactElement {
   return (
     <HoveredImgContainer>
-      <Link to={props.href}>
-        <img
-          src={props.img}
-          alt={props.alt}
-          width={props.size}
-          height={props.size}
-        />
-      </Link>
+      {props.children ? (
+        <a href={props.href} target="_blank" rel="noopener noreferrer">
+          {props.children}
+        </a>
+      ) : (
+        <Link to={props.href}>
+          <img
+            src={props.img ? props.img : "https://via.placeholder.com/150"}
+            alt={props.alt}
+            width={props.size}
+            height={props.size}
+          />
+        </Link>
+      )}
     </HoveredImgContainer>
   );
 }
@@ -25,7 +31,7 @@ const HoveredImgContainer = styled.div`
     display: inline-block;
     padding: 10px;
     background-color: #212121;
-    color: white;
+    color: #cfe0c3;
     z-index: 1;
     overflow: hidden;
     position: relative;

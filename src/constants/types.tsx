@@ -5,10 +5,11 @@ export interface IShowButton {
 }
 
 export interface IHoveredImg {
-  img: string;
+  img?: string;
   alt: string;
-  size: string;
+  size?: string;
   href: string;
+  children?: React.ReactNode;
 }
 
 export interface IHoveredLink {
@@ -16,4 +17,10 @@ export interface IHoveredLink {
   text: string;
   width?: string;
   onClick?: () => void;
+}
+
+export interface IFooterIcon {
+  href: string;
+  alt: string;
+  icon: React.ReactNode;
 }

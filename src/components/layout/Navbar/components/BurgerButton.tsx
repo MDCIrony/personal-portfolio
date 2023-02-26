@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-//Interfaces
 import { IShowButton } from "../../../../constants/types";
 
 function BurgerButton(props: IShowButton): JSX.Element {
