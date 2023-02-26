@@ -1,6 +1,6 @@
 # Miguel Díaz Portfolio
 
-This is a portfolio website created with React.js and Typescript. It is a single page application that uses React Router to navigate between different sections of the website. The website is hosted on GitHub Pages and can be found at https://mdcastillo.me
+This is a portfolio website created with React.js and Typescript. It is a single page application that uses React Router to navigate between different sections of the website. The website is hosted on VercelApp and can be found at https://www.mdcastillo.me
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ This is a portfolio website created with React.js and Typescript. It is a single
 - [x] Responsive design
 - [x] Dark mode native
 - [x] React Router
-- [x] GitHub Pages deployment
+- [x] VercelApp deployment
 
 ## Credits
 
@@ -64,12 +64,6 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-### `npm run deploy`
-
-**Note: make sure to the `homepage` field in `package.json` is set to the correct URL Domain before running this command.**
-
-Builds the app for production to the `build` folder and deploys it to the `gh-pages` branch.\
 
 ## Contact
 
