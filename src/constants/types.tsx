@@ -24,3 +24,16 @@ export interface IFooterIcon {
   alt: string;
   icon: React.ReactNode;
 }
+
+export interface IImage {
+  src: string;
+  alt: string;
+  width?: string;
+  height?: string;
+  className?: string;
+}
+
+export interface IRewriteText {
+  toRotate: string[];
+  period: number;
+}

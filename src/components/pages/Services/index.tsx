@@ -1,10 +1,10 @@
 import React from "react";
 import StyledPage from "../../../constants/StyledComponents";
 
-export default function Home(): React.ReactElement {
+export default function Services(): React.ReactElement {
   return (
     <StyledPage>
-      <h1 className="text">Miguel Díaz Portfolio {`<en construcción...>`}</h1>
+      <h1 className="text">Services {`<en construcción...>`}</h1>
     </StyledPage>
   );
 }
