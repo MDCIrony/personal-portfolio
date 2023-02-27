@@ -1,15 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import BurgerButton from "./components/BurgerButton";
 import HoveredLink from "../../common/HoveredLink";
 import HoveredImg from "../../common/HoveredImg";
 import { Outlet } from "react-router-dom";
 
+const navbarLinks = [
+  {
+    id: 1,
+    text: "HOME",
+    link: "/",
+  },
+  {
+    id: 2,
+    text: "PROJECTS",
+    link: "/projects",
+  },
+  {
+    id: 3,
+    text: "CONTACT",
+    link: "/contact",
+  },
+  {
+    id: 4,
+    text: "SERVICES",
+    link: "/services",
+  },
+];
+
 function Navbar(): JSX.Element {
   const [clicked, setCliked] = useState(false);
+  const [isSolid, setIsSolid] = useState(false);
 
+  //Esto es para que el navbar cambie de color cuando se hace scroll
+  useEffect(() => {
+    function handleScroll() {
+      const scrollPosition = window.scrollY;
+      setIsSolid(scrollPosition > 0);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  //Cambia el estado de clicked solo si está en una resolución de mobile
   const handleClick = () => {
-    //Cambia el estado de clicked solo si está en una resolución de mobile
     if (window.screen.width < 768) {
       setCliked(!clicked);
     }
@@ -18,41 +56,34 @@ function Navbar(): JSX.Element {
   return (
     <>
       <NavbarContainer>
-        <div className="logoContainer">
-          <HoveredImg
-            img={process.env.PUBLIC_URL + "/images/hacker.png"}
-            alt="logo"
-            size="50px"
-            href="https://www.mdcastillo.me"
-          />
-        </div>
+        <div className={`contenedor ${isSolid ? "solid-navbar" : ""}`}>
+          <div className="logoContainer">
+            <HoveredImg
+              img={process.env.PUBLIC_URL + "/images/hacker.png"}
+              alt="logo"
+              size="40px"
+              href="https://www.mdcastillo.me"
+            />
+          </div>
 
-        <div className={`links ${clicked ? "active" : ""}`.trimEnd()}>
-          <HoveredLink
-            link={"/"}
-            onClick={handleClick}
-            text={"HOME"}
-            width="100px"
-          />
-          <HoveredLink
-            link={"/projects"}
-            onClick={handleClick}
-            text={"PROJECTS"}
-            width="100px"
-          />
-          <HoveredLink
-            link={"/contact"}
-            onClick={handleClick}
-            text={"CONTACT"}
-            width="100px"
-          />
+          <div className={`links ${clicked ? "active" : ""}`.trimEnd()}>
+            {navbarLinks.map((link) => (
+              <HoveredLink
+                key={link.id}
+                link={link.link}
+                onClick={handleClick}
+                text={link.text}
+                width="100px"
+              />
+            ))}
+          </div>
+          <div className="burger">
+            <BurgerButton clicked={clicked} handleClick={handleClick} />
+          </div>
+          <BackgroundMobileNav
+            className={`initial ${clicked ? "active" : ""}`}
+          ></BackgroundMobileNav>
         </div>
-        <div className="burger">
-          <BurgerButton clicked={clicked} handleClick={handleClick} />
-        </div>
-        <BackgroundMobileNav
-          className={`initial ${clicked ? "active" : ""}`}
-        ></BackgroundMobileNav>
       </NavbarContainer>
       <Outlet />
     </>
@@ -64,25 +95,27 @@ export default Navbar;
 // Styled components
 const NavbarContainer = styled.nav`
   /*Estilo para el nav en desktop*/
-  padding: 0.4rem;
-  background-color: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100% !important;
+  background-color: transparent;
+  z-index: 100;
   position: fixed;
-  margin-top: 1rem;
-  width: 100%;
 
-  .logoContainer {
-    margin-left: 50px;
+  .contenedor {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
   }
 
-  h2 {
-    color: white;
-    font-weight: 400;
-    span {
-      font-weight: bold;
-    }
+  .solid-navbar {
+    background-color: rgba(33, 33, 33, 1);
+  }
+
+  .logoContainer {
+    margin-left: 30px;
+  }
+  
+
   }
 
   /*Estilo del menú de links del navbar en mobile cuando están inactivos (fuera de pantalla)*/
@@ -99,8 +132,8 @@ const NavbarContainer = styled.nav`
     /*Estilo de los links del menu nav en desktop*/
     @media (min-width: 768px) {
       position: initial;
-      margin-right: 50px;
       display: flex;
+      margin-right: 30px;
 
       a {
         margin-left: 2rem;
