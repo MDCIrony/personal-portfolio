@@ -9,36 +9,43 @@ import {
   SiSupabase,
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
-import LogoTech from "./LogoTech";
+import LogoTech from "../LogoTech";
 
 const techLogos = [
   {
     id: 1,
-    icon: <SiPython />,
+    icon: <SiPython title="Logo de Python" />,
+    title: "Logo de Python.",
   },
   {
     id: 2,
-    icon: <SiDjango />,
+    icon: <SiDjango title="Logo de Django" />,
+    title: "Logo de Django",
   },
   {
     id: 3,
-    icon: <SiTypescript />,
+    icon: <SiTypescript title="Logo de Typescript" />,
+    title: "Logo de Typescript",
   },
   {
     id: 4,
-    icon: <SiExpress />,
+    icon: <SiExpress title="Logo de Express" />,
+    title: "Logo de Express",
   },
   {
     id: 5,
-    icon: <FaNodeJs />,
+    icon: <FaNodeJs title="Logo de NodeJS" />,
+    title: "Logo de NodeJS",
   },
   {
     id: 6,
-    icon: <SiAmazonaws />,
+    icon: <SiAmazonaws title="Logo de AWS" />,
+    title: "Logo de AWS",
   },
   {
     id: 7,
-    icon: <SiSupabase />,
+    icon: <SiSupabase title="Logo de Supabase" />,
+    title: "Logo de Supabase",
   },
 ];
 
@@ -57,6 +64,7 @@ export default function BackendInfo(): React.ReactElement {
           <div className="col-sm-1 col-3">
             <LogoTech
               key={techLogo.id}
+              title={techLogo.title}
               size="30px"
               color="white"
               icon={techLogo.icon}

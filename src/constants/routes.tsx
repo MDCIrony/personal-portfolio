@@ -4,9 +4,9 @@ import Home from "../components/pages/Home";
 import Contact from "../components/pages/Contact/Contact";
 import Projects from "../components/pages/Projects";
 import NoMatch from "../components/pages/Error/NoMatch";
-import BackendInfo from "../components/pages/Home/components/BackendInfo";
-import FrontendInfo from "../components/pages/Home/components/FrontendInfo";
-import DatabaseInfo from "../components/pages/Home/components/DatabaseInfo";
+import BackendInfo from "../components/pages/Home/components/childrens/BackendInfo";
+import FrontendInfo from "../components/pages/Home/components/childrens/FrontendInfo";
+import DatabaseInfo from "../components/pages/Home/components/childrens/DatabaseInfo";
 import Services from "../components/pages/Services";
 
 const router = createBrowserRouter([

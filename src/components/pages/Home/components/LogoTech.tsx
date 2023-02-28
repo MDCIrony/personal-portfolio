@@ -6,11 +6,12 @@ interface ILogoTech {
   icon: React.ReactElement;
   color: string;
   size: string;
+  title: string;
 }
 
 export default function LogoTech(props: ILogoTech): React.ReactElement {
   return (
-    <HoveredImgContainer className="py-1">
+    <HoveredImgContainer title={props.title} className="py-1">
       <IconContext.Provider value={{ color: props.color, size: props.size }}>
         <div className="image">{props.icon}</div>
       </IconContext.Provider>
