@@ -8,36 +8,43 @@ import {
   SiSupabase,
   SiPrisma,
 } from "react-icons/si";
-import LogoTech from "./LogoTech";
+import LogoTech from "../LogoTech";
 
 const techLogos = [
   {
     id: 1,
-    icon: <SiMysql />,
+    icon: <SiMysql title="Logo de MySQL" />,
+    title: "Logo de MySQL",
   },
   {
     id: 2,
-    icon: <SiPostgresql />,
+    icon: <SiPostgresql title="Logo de PostgreSQL" />,
+    title: "Logo de PostgreSQL",
   },
   {
     id: 3,
-    icon: <SiMongodb />,
+    icon: <SiMongodb title="Logo de MongoDB" />,
+    title: "Logo de MongoDB",
   },
   {
     id: 4,
-    icon: <SiRedis />,
+    icon: <SiRedis title="Logo de Redis" />,
+    title: "Logo de Redis",
   },
   {
     id: 5,
-    icon: <SiFirebase />,
+    icon: <SiFirebase title="Logo de Firebase" />,
+    title: "Logo de Firebase",
   },
   {
     id: 6,
-    icon: <SiSupabase />,
+    icon: <SiSupabase title="Logo de Supabase" />,
+    title: "Logo de Supabase",
   },
   {
     id: 7,
-    icon: <SiPrisma />,
+    icon: <SiPrisma title="Logo de Prisma" />,
+    title: "Logo de Prisma",
   },
 ];
 
@@ -56,6 +63,7 @@ export default function DatabaseInfo(): React.ReactElement {
           <div className="col-sm-1 col-3">
             <LogoTech
               key={techLogo.id}
+              title={techLogo.title}
               size="30px"
               color="white"
               icon={techLogo.icon}
