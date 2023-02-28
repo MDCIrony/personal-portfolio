@@ -52,14 +52,16 @@ export default function BackendInfo(): React.ReactElement {
         trabajado en el despliegue de aplicaciones usando servicios AWS [lambda,
         EC2, S3] y Supabase.
       </p>
-      <div className="py-4 d-flex justify-content-center text-center bg-dark-subtle text-emphasis-dark">
+      <div className="py-4 row justify-content-center text-center bg-dark-subtle text-emphasis-dark">
         {techLogos.map((techLogo) => (
-          <LogoTech
-            key={techLogo.id}
-            size="30px"
-            color="white"
-            icon={techLogo.icon}
-          />
+          <div className="col-sm-1 col-3">
+            <LogoTech
+              key={techLogo.id}
+              size="30px"
+              color="white"
+              icon={techLogo.icon}
+            />
+          </div>
         ))}
       </div>
     </div>
