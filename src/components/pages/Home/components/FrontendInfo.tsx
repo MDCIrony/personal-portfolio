@@ -25,11 +25,11 @@ export default function FrontendInfo(): React.ReactElement {
   return (
     <div className="animate__animated animate__fadeIn align-items-center justify-content-center">
       <p className="py-4 text-center text-white">
-        Como backend he trabajado en el desarrollo de APIs REST con NodeJS +
-        Express y Python + DjangoRestFramework. También he implementado
-        servicios como Twilio, mercadopago, entre otros. Adicionalmente, he
-        trabajado en el despliegue de aplicaciones usando servicios AWS [lambda,
-        EC2, S3] y Supabase.
+        En frontend, he construido soluciones con ReactJS, empleando librerías
+        como React Router para el Client Side Rendering, enfocado en la creación
+        de Single Page Applications. Además, he trabajado con librerías CSS como
+        Bootstrap y animated CSS, estando también muy cómodo con el trabajo en
+        CSS puro.
       </p>
       <div className="py-4 d-flex justify-content-center text-center bg-dark-subtle text-emphasis-dark">
         {techLogos.map((techLogo) => (
