@@ -23,7 +23,7 @@ export default HoveredLink;
 const HoverButtonContainer = styled.div`
   a {
     display: inline-block;
-    border: 4px solid #40798c;
+    border: 2px solid #40798c;
     padding: 0.5rem;
     background-color: #212121;
     color: #cfe0c3;
@@ -32,7 +32,6 @@ const HoverButtonContainer = styled.div`
     z-index: 1;
     overflow: hidden;
     position: relative;
-    border-radius: 4px;
     text-decoration: none;
   }
 
