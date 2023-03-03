@@ -1,35 +1,40 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import BurgerButton from "./components/BurgerButton";
-import HoveredLink from "../../common/HoveredLink";
+//************ Temporalmente inhabilitado *********** */
+// import BurgerButton from "./components/BurgerButton";
+// import HoveredLink from "../../common/HoveredLink";
+//************************************************* */
 import HoveredImg from "../../common/HoveredImg";
 import { Outlet } from "react-router-dom";
 
-const navbarLinks = [
-  {
-    id: 1,
-    text: "HOME",
-    link: "/",
-  },
-  {
-    id: 2,
-    text: "PROJECTS",
-    link: "/projects",
-  },
-  {
-    id: 3,
-    text: "CONTACT",
-    link: "/contact",
-  },
-  {
-    id: 4,
-    text: "SERVICES",
-    link: "/services",
-  },
-];
+//************************************************* */
+// Temporalmente inhabilitado
+// const navbarLinks = [
+//   {
+//     id: 1,
+//     text: "HOME",
+//     link: "/",
+//   },
+//   {
+//     id: 2,
+//     text: "PROJECTS",
+//     link: "/projects",
+//   },
+//   {
+//     id: 3,
+//     text: "CONTACT",
+//     link: "/contact",
+//   },
+//   {
+//     id: 4,
+//     text: "SERVICES",
+//     link: "/services",
+//   },
+// ];
+//************************************************* */
 
 function Navbar(): JSX.Element {
-  const [clicked, setCliked] = useState(false);
+  // const [clicked, setCliked] = useState(false);
   const [isSolid, setIsSolid] = useState(false);
 
   //Esto es para que el navbar cambie de color cuando se hace scroll
@@ -47,11 +52,12 @@ function Navbar(): JSX.Element {
   }, []);
 
   //Cambia el estado de clicked solo si está en una resolución de mobile
-  const handleClick = () => {
-    if (window.screen.width < 768) {
-      setCliked(!clicked);
-    }
-  };
+  // TEMPORALMENTE INHABILITADO
+  // const handleClick = () => {
+  //   if (window.screen.width < 768) {
+  //     setCliked(!clicked);
+  //   }
+  // };
 
   return (
     <>
@@ -65,9 +71,11 @@ function Navbar(): JSX.Element {
               href="https://www.mdcastillo.me"
             />
           </div>
-
-          <div className={`links ${clicked ? "active" : ""}`.trimEnd()}>
-            {navbarLinks.map((link) => (
+          {/**************************
+           * Temporalmente inhabilitado
+           ***************************/}
+          {/* <div className={`links ${clicked ? "active" : ""}`.trimEnd()}> */}
+          {/* {navbarLinks.map((link) => (
               <HoveredLink
                 key={link.id}
                 link={link.link}
@@ -75,15 +83,15 @@ function Navbar(): JSX.Element {
                 text={link.text}
                 width="100px"
               />
-            ))}
-          </div>
-          <div className="burger">
+            ))} */}
+        </div>
+        {/* <div className="burger">
             <BurgerButton clicked={clicked} handleClick={handleClick} />
-          </div>
-          <BackgroundMobileNav
+          </div> */}
+        {/* <BackgroundMobileNav
             className={`initial ${clicked ? "active" : ""}`}
           ></BackgroundMobileNav>
-        </div>
+        </div> */}
       </NavbarContainer>
       <Outlet />
     </>
