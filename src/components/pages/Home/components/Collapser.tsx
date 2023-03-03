@@ -7,7 +7,7 @@ const collapserButtonsInfo = [
   {
     id: 1,
     textButton: "Tecnologías Backend",
-    to: "/backend-info",
+    to: "/",
   },
   {
     id: 2,

@@ -23,7 +23,7 @@ export default function Home(): React.ReactElement {
 }
 
 const StyledHome = styled.section`
-  padding-top: 10rem !important;
+  padding-top: 7rem !important;
   padding-bottom: 5rem !important;
   height: 100% !important;
 `;
